@@ -15,7 +15,6 @@ export default function SearchBox() {
       <p className={css.text}>Find contacts by name</p>
       <input
         type="text"
-        // value={value}
         onChange={(event) => {
           hundleFilter(event.target.value);
         }}
