@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -13,4 +13,8 @@
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
+} */
+.App {
+  width: 640px;
+  margin: 0 auto;
 }

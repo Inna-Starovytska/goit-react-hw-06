@@ -18,13 +18,13 @@
   border-radius: 5px;
 }
 
-.label {
+.inputLabel {
   font-weight: bold;
   font-size: 24px;
   margin-left: 0;
 }
 
-.button {
+.btn {
   width: 200px;
   padding: 8px;
   font-size: 16px;

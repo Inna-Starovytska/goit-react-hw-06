@@ -1,18 +1,26 @@
-import React from "react";
 import css from "./SearchBox.module.css";
 
-const SearchBox = ({ value, onChange }) => (
-  <div className={css.wrapper}>
-    <label className={css.label} htmlFor="filter">
-      Find contacts by name:
-    </label>
-    <input
-      className={css.input}
-      type="text"
-      value={value}
-      onChange={onChange}
-    />
-  </div>
-);
+import { useDispatch } from "react-redux";
+import { setStatusFilter } from "../../redux/filtersSlice";
 
-export default SearchBox;
+export default function SearchBox() {
+  const dispatch = useDispatch();
+
+  const hundleFilter = (valueInput) => {
+    dispatch(setStatusFilter(valueInput));
+  };
+
+  return (
+    <div className={css.wrapper}>
+      <p className={css.text}>Find contacts by name</p>
+      <input
+        type="text"
+        // value={value}
+        onChange={(event) => {
+          hundleFilter(event.target.value);
+        }}
+        className={css.input}
+      />
+    </div>
+  );
+}
